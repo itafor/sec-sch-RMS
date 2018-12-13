@@ -1,0 +1,420 @@
+
+* {
+    box-sizing: border-box;
+}
+html, body{
+ padding: 0px;
+ margin: 0px;
+ height: 100%; 
+}  
+.page-head-line {
+    font-weight: 900;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #F0677C;
+    text-transform: uppercase;
+    color: #35475e;
+    font-size: 20px;
+    margin-bottom: 40px;
+}  
+#menus{
+    position: relative;
+    left: -200px;
+     transition: all 600ms linear;
+     z-index: 10; 
+     float: left;
+     height: 1000px;
+    }
+    #menus.active{
+     left: 0px;
+    }
+#menus ul{
+     list-style: none;  
+     margin-left: -50px;
+     margin-top: -01px;
+     
+}
+#menus ul li{
+padding: 15px;
+position: relative;
+width: 200px; 
+background-color: #34495e;
+ border-top: 1px solid #BDC3C7;
+ transition: all 0.3s; 
+ -webkit-transition: all 0.3s;
+ -o-transition: all 0.3s;  
+ z-index: 5;
+}
+#menus > ul >li{
+border-right: 5px solid #f1c401;
+}
+#menus ul ul{
+ transition: all 0.3s;
+ opacity: 0;
+ left: 107%;  
+ position: absolute;
+  margin-top: -70px;  
+ visibility: hidden;
+  z-index: 4px;
+}
+#menus ul li:hover > ul{
+    opacity:1;
+visibility: visible;
+}
+#menus ul li:hover {  
+    background-color: #f1c401;
+    opacity:1;
+visibility: visible;
+}
+#menus ul li a{
+color: #fff;
+text-decoration: none;
+}
+#menus > ul > li:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    margin-left: 60%;
+color: #fff;
+font-size: 20px;
+}
+#menus > ul > li:nth-of-type(6)::after {
+    content: "";
+    position: absolute;
+    margin-left: 50%;
+color: #fff;
+font-size: 20px;
+}
+span{
+margin-right: 15px;
+}
+.userheader{
+  background-color: #35475e;
+  height: 100px;
+   width: 100%; 
+  position: relative;
+  bottom: 0; 
+  z-index: 10;
+}
+.userfooter{
+background-color: #35475e;
+  position:relative;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  height: 400px;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  margin-top: 10px ;
+  width: 100%;
+   
+}
+#searchfield input[name="book"]{
+ height:70px; 
+ width: 100px;
+}
+/* main box container */
+.admincontent{
+         margin-top: 10px; 
+          
+          height: auto;
+          margin-left: 100px; 
+          margin-right: 100px;
+          padding-right: 30px;
+          padding-left: 30px;
+          width: auto;  
+          }
+.userheader .dropbtn {
+     background-color: #34495e; 
+    color: white;
+    padding: 3px;
+    font-size: 16px;
+    border: none;
+}
+
+.userheader .dropdown {
+    position: relative;
+    display: inline-block;
+   float: right;
+    padding-top: -23px;
+    margin-right: 70px;
+}
+.userheader  img{  
+    float: left; 
+    margin-left: 50px;
+    padding-top: 30px; 
+    }
+   .userheader .dropdown img{
+    position: relative;
+    padding-top : -5px; 
+   }
+.userheader .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.userheader .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.userheader .dropdown-content a:hover {background-color: blue}
+
+.userheader .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.userheader .dropdown:hover .dropbtn {
+    /*background-color: black;  */
+}
+#menus .toggle-btn{
+ position: absolute;
+ left: 200px;
+ top: 115px;
+}
+#menus .toggle-btn span{
+   display: block;
+   width: 30px;
+   height: 5px;
+   background: #151719;
+   margin: 5% 0%;
+   
+}
+  #studentresultdetail .stddetals{
+   color:#000000; 
+    margin-left:20px;
+    font-family: roboto;
+    font-size: 14px;
+
+  }
+ #studentresultdetail .tblwidth{
+    width: 300px;
+ }
+  #studentresultdetail .tblwidth img{
+    width: 120px;
+    height: 120px;
+    margin-left: 130px;
+    border-radius: 5px ;
+    margin-top: -80px;
+ }
+ .nav {
+    background-color: #000000;
+    border-color: green;
+}
+.test{
+ color: #ffffff;
+}
+
+abbr
+{
+        border-bottom: 1px dotted #666;
+    cursor: help;
+}
+
+.tooltip
+{
+    position:absolute;
+    background-color:#eeeefe;
+    border: 1px solid #aaaaca;
+    font-size: smaller;
+    padding:4px;
+    width: 160px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);    
+} 
+/* set element styles to fit tablet and higher(desktop) */
+@media screen and (max-width: 800px) {
+  #menus{
+    position: relative;
+    left: -200px;
+     transition: all 600ms linear;
+     z-index: 2; 
+    }
+    #menus.active{
+     left: 0px;
+    } 
+    #menus .toggle-btn{
+ position: absolute;
+ left: 200px;
+ top: 115px;
+}
+#menus .toggle-btn span{
+   display: block;
+   width: 30px;
+   height: 5px;
+   background: #151719;
+   margin: 5% 0%;
+   
+}   
+#menus ul{
+     list-style: none;
+     margin: 0;
+     margin-left: -41px; 
+    margin-top: -01px;
+}
+#menus ul li{
+padding: 5px;
+position: relative;
+width: 118px; 
+background-color: #35475e;
+ border-top: 1px solid #BDC3C7;
+ z-index: 5;
+ transition: all 0.3s; 
+ -webkit-transition: all 0.3s;
+ -o-transition: all 0.3s;  
+}
+#menus > ul >li{
+border-right: 5px solid #f1c401;
+}
+#menus ul ul{
+ transition: all 0.3s;
+ opacity: 0;
+  margin-top: -24px;
+ left: 106%;
+ position: absolute;
+ visibility: hidden;
+}
+#menus ul li:hover > ul{
+    opacity:1;
+visibility: visible;
+}
+#menus ul li:hover {  
+    background-color: blue;
+    opacity:1;
+visibility: visible;
+}
+#menus ul li a{
+color: #fff;
+text-decoration: none;
+}
+#menus > ul > li:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    margin-left: 29%;
+color: #fff;
+font-size: 20px;
+}
+#menus > ul > li:nth-of-type(6)::after {
+    content: "";
+    position: absolute;
+    margin-left: 5%;
+color: #fff;
+font-size: 20px;
+}
+span{
+margin-right: 15px;
+}
+.userheader{
+  background-color: #35475e;
+  height: 70px;
+  width: 100%; 
+  position: relative;
+  bottom: 0;
+}
+/*user profile*/
+
+.userheader .dropbtn {
+    
+    color: white;
+    padding: 3px;
+    font-size: 12px;
+    border: none;
+}
+
+.userheader .dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin-top: -10px; 
+    
+} 
+.userheader  img{  
+    float: left; 
+    margin-left: 30px;
+    padding-top: 20px; 
+    }
+
+ .userheader .dropdown img{ 
+   width: 50px;
+    height: 50px;
+    position: relative;
+    padding-top : -5px; 
+    
+}
+.userheader .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #34495e; 
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    color: white;   
+}
+
+.userheader .dropdown-content a {
+    color: white; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;    
+}
+
+.userheader .dropdown-content a:hover {background-color: blue}
+
+.userheader .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.userheader .dropdown:hover .dropbtn {
+    
+}
+/* main box container */
+.admincontent{
+         margin-top: 50px; 
+          border: 2px solid #35475e; 
+          height: auto; 
+          margin-left: -6px;
+           width: auto; 
+    }
+
+.userfooter{
+  background-color: #35475e;
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+   height: auto;
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  width: 100%;
+}
+ .applicants{
+ margin-top: -300px;
+ }
+ abbr
+{
+        border-bottom: 1px dotted #666;
+    cursor: help;
+}
+
+.tooltip
+{
+    position:absolute;
+    background-color:#eeeefe;
+    border: 1px solid #aaaaca;
+    font-size: smaller;
+    padding:4px;
+    width: 160px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);    
+} 
+/*custom scroll bar*/
+
+}
